@@ -94,6 +94,7 @@ resource "aws_opensearchserverless_collection" "kb_oss_collection" {
 provider "opensearch" {
   url         = aws_opensearchserverless_collection.kb_oss_collection.collection_endpoint
   healthcheck = false
+  aws_profile     = var.profile 
 }
 
 # OpenSearch index creation
